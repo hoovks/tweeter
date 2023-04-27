@@ -1,9 +1,9 @@
-import Button from "@mui/material/Button";
-import { PrimaryBtnProps } from "./PrimaryBtn.types";
+import { Button as MaterialButton } from "@mui/material";
+import { ButtonProps } from "./Button.types";
 
-export const PrimaryBtn = ({ children, startIcon }: PrimaryBtnProps) => {
+export const Button = ({ children, startIcon }: ButtonProps) => {
   return (
-    <Button
+    <MaterialButton
       startIcon={startIcon}
       sx={{
         px: 3,
@@ -16,6 +16,6 @@ export const PrimaryBtn = ({ children, startIcon }: PrimaryBtnProps) => {
       }}
     >
       {children}
-    </Button>
+    </MaterialButton>
   );
 };
