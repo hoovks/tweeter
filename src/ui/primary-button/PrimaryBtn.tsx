@@ -1,10 +1,10 @@
 import Button from "@mui/material/Button";
 import { PrimaryBtnProps } from "./PrimaryBtn.types";
 
-export const PrimaryBtn = ({ children, icon }: PrimaryBtnProps) => {
+export const PrimaryBtn = ({ children, startIcon }: PrimaryBtnProps) => {
   return (
     <Button
-      startIcon={icon}
+      startIcon={startIcon}
       sx={{
         px: 3,
         fontSize: 12,

@@ -1,4 +1,4 @@
 export interface PrimaryBtnProps {
-  icon?: JSX.Element;
+  startIcon?: JSX.Element;
   children: React.ReactNode;
 }
