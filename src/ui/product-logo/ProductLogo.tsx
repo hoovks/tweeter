@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import desktopLogo from "../../images/tweeter.svg";
 import mobileLogo from "../../images/tweeter-small.svg";
 
-export const Logo = () => {
+export const ProductLogo = () => {
   return (
     <Link to="/">
       <Box
