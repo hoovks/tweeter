@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { CardTitleProps } from "./CardTitle.types";
 
-export const CardTitle = ({ title }: CardTitleProps) => {
+export const CardTitle = ({ children }: CardTitleProps) => {
   return (
     <Typography
       sx={{
@@ -12,7 +12,7 @@ export const CardTitle = ({ title }: CardTitleProps) => {
         color: "grey.900",
       }}
     >
-      {title}
+      {children}
     </Typography>
   );
 };

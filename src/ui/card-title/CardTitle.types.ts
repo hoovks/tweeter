@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface CardTitleProps {
-  title: string;
+  children: React.ReactNode;
 }
