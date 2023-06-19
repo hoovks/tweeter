@@ -5,6 +5,16 @@ import { MobileNavIcon } from "./mobile-nav-icon/MobileNavIcon";
 import { Home, Explore, Bookmark } from "@mui/icons-material";
 
 export const MobileNav = () => {
+  const location = useLocation();
+  const [selected, setSelected] = useState(location.pathname);
+
+  const handleChange = (
+    _event: React.SyntheticEvent<Element, Event>,
+    selected: string
+  ) => {
+    setSelected(selected);
+  };
+
   const navItems = [
     { pathname: "/", icon: <MobileNavIcon icon={<Home />} /> },
     {
@@ -17,14 +27,6 @@ export const MobileNav = () => {
     },
   ];
 
-  const location = useLocation();
-  const [selected, setSelected] = useState(location.pathname);
-  const handleChange = (
-    _event: React.SyntheticEvent<Element, Event>,
-    selected: string
-  ) => {
-    setSelected(selected);
-  };
   return (
     <BottomNavigation
       value={selected}
