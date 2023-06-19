@@ -2,16 +2,17 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { Paper } from "@mui/material";
+import { TabMenuProps } from "./TabMenu.types";
 
-export const TabMenu = ({ variant }: { variant: keyof typeof tabs }) => {
+export const tabs = {
+  explorePage: ["Top", "Latest", "People", "Media"],
+  bookmarksPage: ["Tweets", "Tweets & replies", "Media", "Likes"],
+};
+
+export const TabMenu = ({ variant }: TabMenuProps) => {
   const [value, setValue] = React.useState(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-  };
-
-  const tabs = {
-    explorePage: ["Top", "Latest", "People", "Media"],
-    bookmarksPage: ["Tweets", "Tweets & replies", "Media", "Likes"],
   };
 
   return (
