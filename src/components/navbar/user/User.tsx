@@ -3,9 +3,11 @@ import { IconButton, Link, Stack } from "@mui/material";
 import { ArrowDropDown } from "@mui/icons-material";
 import { Avatar } from "../../../ui/avatar/Avatar";
 import { UserDropdown } from "../user-dropdown/UserDropdown";
-import { UserProps } from "./User.types";
+import { useUser } from "../../../contexts/UserContext";
 
-export const User = ({ username, avatar }: UserProps) => {
+export const User = () => {
+  const user = useUser();
+
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
@@ -16,7 +18,7 @@ export const User = ({ username, avatar }: UserProps) => {
   return (
     <Stack direction="row" alignItems="center" spacing={1.25}>
       <IconButton disableRipple sx={{ p: 0 }}>
-        <Avatar src={avatar} />
+        <Avatar src={user.profileImage} />
       </IconButton>
       <Link
         href="/user"
@@ -29,7 +31,7 @@ export const User = ({ username, avatar }: UserProps) => {
           color: "grey.900",
         }}
       >
-        {username}
+        {`${user.firstName} ${user.lastName}`}
       </Link>
 
       <IconButton onClick={handleOpenUserMenu}>
