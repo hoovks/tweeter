@@ -1,6 +1,9 @@
 import { Box, Typography } from "@mui/material";
+import { useAuthor } from "../../contexts/AuthorContext";
 
 export const Footer = () => {
+  const author = useAuthor();
+
   return (
     <Box
       display={{ xs: "none", md: "flex" }}
@@ -18,7 +21,7 @@ export const Footer = () => {
           color: "grey.500",
         }}
       >
-        created by hoovks - devChallenges.io
+        created by {author} - devChallenges.io
       </Typography>
     </Box>
   );
