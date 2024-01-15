@@ -5,7 +5,11 @@ import { Menu } from "./menu/Menu";
 
 export const Navbar = () => {
   return (
-    <AppBar position="static" elevation={0} sx={{ height: 68 }}>
+    <AppBar
+      position="static"
+      elevation={0}
+      sx={{ bgcolor: "grey.50", height: 68 }}
+    >
       <Toolbar
         disableGutters
         sx={{
