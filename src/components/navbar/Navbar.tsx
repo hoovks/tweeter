@@ -2,9 +2,8 @@ import { AppBar, Toolbar } from "@mui/material";
 import { User } from "./user/User";
 import { ProductLogo } from "../../ui/product-logo/ProductLogo";
 import { Menu } from "./menu/Menu";
-import { NavbarProps } from "./Navbar.types";
 
-export const Navbar = ({ username, avatar }: NavbarProps) => {
+export const Navbar = () => {
   return (
     <AppBar
       position="static"
@@ -21,7 +20,7 @@ export const Navbar = ({ username, avatar }: NavbarProps) => {
       >
         <ProductLogo />
         <Menu />
-        <User username={username} avatar={avatar} />
+        <User />
       </Toolbar>
     </AppBar>
   );
