@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
-import desktopLogo from "../../images/tweeter.svg";
-import mobileLogo from "../../images/tweeter-small.svg";
+import desktopLogo from "../../assets/images/tweeter.svg";
+import mobileLogo from "../../assets/images/tweeter-small.svg";
 
 export const ProductLogo = () => {
   return (

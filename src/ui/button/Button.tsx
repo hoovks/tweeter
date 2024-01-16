@@ -1,7 +1,7 @@
 import { Button as MaterialButton } from "@mui/material";
 import { ButtonProps } from "./Button.types";
 
-export const Button = ({ children, startIcon }: ButtonProps) => {
+export const Button = ({ children, startIcon, onClick }: ButtonProps) => {
   return (
     <MaterialButton
       startIcon={startIcon}
@@ -14,6 +14,7 @@ export const Button = ({ children, startIcon }: ButtonProps) => {
           bgcolor: "primary.dark",
         },
       }}
+      onClick={onClick}
     >
       {children}
     </MaterialButton>
